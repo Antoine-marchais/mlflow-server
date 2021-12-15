@@ -10,7 +10,11 @@ Ce dépôt de code permet de configurer et déployer un serveur mlflow sur GCP p
 
 ### Avec un script
 
-**A compléter**
+Exécuter le script `script/setup-and-deploy.sh` pour créer toutes les ressources du projet, et déployer le serveur MLFlow:
+
+```
+bash script/deploy.sh
+```
 
 ### Manuelle
 

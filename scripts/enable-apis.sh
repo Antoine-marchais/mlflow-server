@@ -13,3 +13,4 @@ gcloud services enable storage-api.googleapis.com
 gcloud services enable storage-component.googleapis.com
 gcloud services enable storage.googleapis.com
 gcloud services enable vpcaccess.googleapis.com
+gcloud services enable sqladmin.googleapis.com
