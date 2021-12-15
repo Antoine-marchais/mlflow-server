@@ -2,7 +2,7 @@
 set -eoux pipefail
 
 set -o allexport
-source deploy.env
+source scripts/deploy.env
 set +o allexport
 
 gcloud config set project "${GOOGLE_CLOUD_PROJECT}"

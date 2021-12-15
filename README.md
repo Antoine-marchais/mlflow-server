@@ -21,7 +21,7 @@ Exécuter le script pour activer toutes les APIs utilisées par le projet (néce
 ```
 gcloud auth login
 gcloud config set project <my-project>
-bash enable-apis.sh
+bash scripts/enable-apis.sh
 ```
 
 **1bis. (Optionel) Création du réseau VPC pour les services utilisés par le serveur**
@@ -59,12 +59,12 @@ Se rendre dans la console GCP > Cloud Storage et créer un bucket pour les artef
 
 **6. Mise à jour des variables d'environnement**
 
-Mettre à jour les fichiers `mlflow-env.env` et `deploy.env` avec les paramètres utilisés pour créer vos ressources.
+Mettre à jour les fichiers `scripts/mlflow-env.env` et `scripts/deploy.env` avec les paramètres utilisés pour créer vos ressources.
 
 **7. Création des secrets**
 
 Se rendre dans la console GCP > Securité > Secret Manager et ajouter 3 secrets:
-- Le secret `mlflow-env`, qui contient le contenu du fichier `mlflow-env.env`
+- Le secret `mlflow-env`, qui contient le contenu du fichier `scripts/mlflow-env.env`
 - Le secret `mysql-credentials`, qui contient le login/mdp de la base de données sous la forme `root:<mdp-de-la-bdd>`
 - Le secret `mlflow-credentials`, qui contient le login/mdp du service mlflow (**A créer) sous la forme `<login>:<mdp>`
 
@@ -76,7 +76,7 @@ Déployer le service avec le script de déploiement. Ce script demande d'être a
 
 ```
 gcloud auth login
-bash deploy.sh
+bash scripts/deploy.sh
 ```
 
 ## Utilisation
